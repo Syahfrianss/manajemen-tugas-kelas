@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Class Task Tracker</title>
+<title>Aplikasi Tugas Kelas</title>
 <style>
   body{font-family:system-ui,sans-serif;max-width:860px;margin:24px auto;padding:0 12px;color:#222}
   input,select,textarea,button{padding:8px;margin:4px 0;font:inherit}
@@ -17,7 +17,7 @@
 </style>
 </head>
 <body>
-<h1>Class Task Tracker</h1>
+<h1>Panel Tugas Kelas</h1>
 <div id="error" class="error hidden"></div>
 <div id="loading" class="muted hidden">Memuat...</div>
 
