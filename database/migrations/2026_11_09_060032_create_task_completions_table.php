@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('task_completions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('task_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->timestamp('completed_at')->useCurrent();
+            $table->unique(['task_id', 'user_id']);
         });
     }
 

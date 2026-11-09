@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('class_id')->constrained('classes')->cascadeOnDelete();
+            $table->foreignId('created_by')->constrained('users')->cascadeOnDelete();
+            $table->string('title');
+            $table->text('description')->nullable();
+            $table->dateTime('due_date');
             $table->timestamps();
+            $table->index('title');
         });
     }
 
